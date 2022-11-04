@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            border: 2px solid black;
+            width: 25%;
+            padding: 20px;
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Write code tominsert an image -->
+    <h1>IMAGE</h1>
+
+    <img src="https://images.indianexpress.com/2022/10/Kohli-30.jpg?w=389" alt="image-error_404">
+    <br> <br>
+
+    <!-- 2. Create a form -->
+    <h1>FORM</h1>
+    <form action="./index.2.html" class="form">
+        <label for="name">Name</label>
+        <input type="name" value="" id="name" name="name"  placeholder="Enter name" > <br> <br>
+        <label for="age">AGE</label>
+        <input type="number" value="" id="age" name="age"  placeholder="Enter age" > <br> <br>
+        <label for="email">EMAIL</label>
+        <input type="email" value="" id="email"  name="email" placeholder="Enter email" > <br> <br>
+        <label for="contact">CONTACT</label>
+        <input type="number" value="" id="number" name="number"  placeholder="Enter contact" > <br> <br>
+
+  <!-- 4.create radio & checkbox button -->
+
+       <!-- Radio- Rdio button allows to choose the exactly one option from the given list.
+             we can not select the multiple options in radio buttons
+        checkbox- checkbox allows to choose multiple option from the given list.
+              we can select multiple options in checkbox. -->
+
+        <h1>COURSE:-</h1>
+        <input type="radio" id="mern" value="mern" name="course"> 
+        <label for="mern">MERN</label><br>
+        <input type="radio" id="mean" value="mean" name="course"> 
+        <label for="mern">MEAN</label><br> <br>
+        <h1>Technology:-</h1>
+        <input type="checkbox" id="html" value="html" name="html">
+        <label for="html">HTNL</label> <br>
+        <input type="checkbox" id="css" value="css" name="css">
+        <label for="html">CSS</label> <br>
+        <input type="checkbox" id="react" value="react" name="react">
+        <label for="html">REACT</label> <br> <br>
+        <button>Submit</button>
+    </form>
+        <br> <br>
+
+        <!-- 3. create table & expplain colspan -->
+        <h1>TABLE</h1>
+        <table border="1">
+         <tr>
+            <th>Name</th>
+            <th colspan="2">Education</th>
+         </tr>
+         <tr>
+            <td>Rohan</td>
+            <td>Full stack</td>
+            <td>Front end</td>
+         </tr>
+         <tr>
+            <td>Yash</td>
+            <td>Full stack</td>
+            <td>Back end</td>
+         </tr>
+        </table>
+        <br> <br>
+
+      <!-- colspan- -->
+           <!-- we uing colspan in table format to merge the two colums.
+           when we won't the same heading for two or three colums then we use the colspan="2".
+           colspan="2" this value will be indicate the how many colums we have to merge.
+         -->
+
+        
+
+
+
+
+    
+</body>
+</html>

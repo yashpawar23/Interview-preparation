@@ -1,0 +1,177 @@
+.trans-div1 {
+    width: 100px;
+    height: 100px;
+    background-color: darksalmon;
+    transition: width 2s, height 6s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+
+}
+
+.trans-div1:hover {
+    width: 200px;
+    height: 200px;
+}
+
+/* Transformation */
+
+.main-box{
+    display: flex;
+    
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: lightseagreen;
+    margin: 20px;
+}
+.box-1:hover{
+    animation-name: box-1-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes box-1-animation{
+    0%{transform: rotate(1turn);
+    }
+    100%{
+        transform: rotate(3turn);
+    }
+}
+.box-2:hover{
+    animation-name: box-2-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes box-2-animation{
+    0%{
+        transform: skewX(15deg);
+    }
+    25%{
+        transform: skewX(-15deg);
+    }
+    50%{
+        transform: skewX(15deg);
+    }
+    75%{
+        transform: skewX(-15deg);
+    }
+    100%{
+        transform: skewX(15deg);
+    }
+}
+.box-3:hover{
+    animation-name: box-3-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+    
+}
+@keyframes box-3-animation{
+    0%{
+        transform:scaleX(1)
+    }
+    100%{
+        transform:scaleY(0.5);
+    }
+}
+
+
+/* GRID */
+.g-div {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.grid-div {
+    border: 5px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-div1 {
+    background-color: darksalmon;
+    grid-column-start: 1;
+
+}
+
+.grid-div2 {
+    background-color: darkolivegreen;
+    grid-column-start: 3;
+}
+
+.grid-div3 {
+    background-color: chartreuse;
+    grid-column-start: 5;
+}
+
+.grid-div4 {
+    background-color: darkcyan;
+    grid-column-start: 2;
+}
+
+.grid-div5 {
+    background-color: darkslateblue;
+    grid-column-start: 4;
+}
+ 
+/* css combinators */
+ div > p{
+    background-color: chartreuse;
+    font-size: 20px;
+    font-weight: bold;
+} 
+div + p{
+    background-color: aqua;
+    font-style: italic;
+
+}
+div ~ h4{
+background-color: deeppink;
+}
+ 
+
+
+/* .Psuedo-selector {
+    border: 5px solid black;
+    width: 100%;
+    height: 200px;
+} */
+
+.button {
+    margin-left: 20px;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+.button:hover{
+    background-color: cadetblue;
+}
+
+/* Pseudo selector */
+
+.link-pseudo {
+    color: green;
+    font-size: 30px;
+}
+.link-pseudo:visited {
+    color: RED;
+}
+
+.link-pseudo:hover {
+    color: hotpink;
+    font-size: 50px;
+}
+
+
+
+h1:first-child span{
+    background-color: coral;
+    
+}
+
