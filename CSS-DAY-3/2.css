@@ -39,7 +39,6 @@ button:hover{
     animation-name: moving-circle;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-  
 }
 
 @keyframes moving-circle {
