@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    
+}
+
+.page-heading {
+    color: white;
+    font-size: 100px;
+    margin: auto;
+
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: conic-gradient(red, yellow, green, red, yellow, green, red, yellow, green, red, yellow, green, red, yellow, green);
+    position: absolute;
+    animation-name: rotating-circle;
+    animation-duration: 6s;
+    top: 0;
+    left: 0;
+}
+@keyframes rotating-circle{
+    0%{left:0; top:0} 
+    25%{ left: 100%; top:0; transform: translate(-100%,0) rotate(450deg);}
+    50%{ left: 100%; top:100%; transform: translate(-100%,-100%) }
+    75%{ left: 0; top:100%; transform: translate(0, -100%) rotate(120deg); }
+    100%{ left: 0; top:0;transform: translate(0,0) ;}
+    
+}
