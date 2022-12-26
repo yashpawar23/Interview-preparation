@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./day1.css">
+    <title>Document</title>
+</head>
+<body>
+     <p>Q.1 Difference between “ == “ and “ === “ operators.</p>
+    <p>ANS</p>
+    <pre>
+       <p>Both are comparator operators .thet return boolean values. <br>
+        The main diifrence is:- <br>
+        "==" is used to the compare the value only.(Loose equality) <br>
+        "===" is used to the compare the value and datatype.(strict equality) <br>
+       </p>
+    </pre>
+    <br><hr>
+
+    <p>Q.2 What is the spread operator?</p>
+    <p>ANS</p>
+    <pre>
+        <p>The JavaScript spread operator (...) allows us to destructure the non-primitive data types like<br>
+            arrays and objects to access the elements individually</p>
+        
+            const array1 = [1, 2, 3];
+               const array2 = [4, 5, 6];
+               const numbersCombined = [...array1, ...array2];
+               console.log(numbersCombined)
+               Output:
+               [1,2,3,4,5,6]
+
+    </pre>
+    <br><hr>
+    <p>Q.3 What are the differences between var, let and const?</p>
+    <p>ANS</p>
+    <pre>
+        <p>var is a global scoped means variables created using var keyword will be accessible globally. It<br>
+            can be redeclared and reinitialized.<br>
+            var a = 10;</p>
+
+        <p>let is a block scoped means variables created using let keyword will be accessible only in that<br>
+            specific block where it has been declared. It cannot be redeclared but it can be reinitialized.<br>
+            let a = 20</p>
+
+        <p>const is also block scoped means variables created using const keyword will be accessible only<br>
+            in that specific block where it has been declared. It cannot be redeclared and cannot be<br>
+            reinitialized.<br>
+            const a = 30</p>
+    </pre>
+    <br><hr>
+    <p>Q.4 What is execution context</p>
+    <p>ANS</p>
+    <pre>
+        
+    </pre>
+    <br><hr>
+    <p>Q.5 What is meant by first class functions</p>
+    <p>ANS</p>
+    <pre>
+        <p>The first class function is the ability of functions to be use theres values and can be passed <br>
+        this in agrgument to the unother function and can be return from the function is this ability known<br>
+         as first class function.</p>
+    </pre>
+    <br><hr>
+    <p>Q.6 What are closures? Give an example of closure</p>
+    <p>ANS</p>
+    <pre>
+        <p>A closure is the combination of a function bundled together (enclosed) with references to its<br>
+            surrounding state (the lexical environment). In other words, a closure gives you access to an<br>
+            outer function's scope from an inner function. In JavaScript, closures are created every time a<br>
+            function is created, at function creation time.</p>
+
+        function x(){
+            var a=23;
+            function y(){
+                console.log(a)
+            }
+          y();
+        }
+        x();
+
+    </pre>
+    <br><hr>
+    <p>Q.1 Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind().</p>
+    <p>ANS</p>
+    <pre>
+       <p>call(): The call() method invokes a function in which first argument will be the object and rest<br>
+        of the arguments required by function will be provided as an individual arguments.<br>
+        </p>
+
+       <p>apply(): The apply() method invokes a function in which first argument will be the object and<br>
+        rest of the arguments will be passed as an array of elements.</p>
+
+        <p>bind: The bind() method returns a new function and this function will be having the reference<br>
+            of the object passed, now whenever you want to use this returned function in the code you can<br>
+            use it by passing rest of the arguments.</p>
+
+         Ex -
+
+            student1 = {
+                firstName :"Yash",
+                lastName:"Pawar"
+            }
+            
+            student2 = {
+                firstName :"omkar",
+                lastName:"Pawar"
+            }
+            
+            
+            
+            let printFullName = function(hometown,state,){
+                console.log(this.firstName + this.lastName + "from" + " " + hometown );
+            }
+            
+            printFullName.call(student1,"MUMBAI","MAHARASHTRA");   -------call()
+            printFullName.apply(student1,["MUMBAI","MAHARASHTRA"]);-------apply()
+            
+             let fullMyName = printFullName.bind(student2,"DUBAI");
+             console.log(fullMyNane);
+             fullMyNane();                                         --------bind()
+            
+    </pre>
+    <br><hr>
+    
+    
+</body>
+</html>

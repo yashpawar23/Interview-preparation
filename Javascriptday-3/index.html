@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./day3.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>Q.1 How many operators do we have in JS ?</p>
+    <p>ANS</p>
+    <pre>
+        We have 6 types of operators in JS they are
+             1. Arithmetic Operators : + - * / %
+             2. Comparison Operators : == === != !==
+             3. Logical Operators : && || !
+             4. Assignment Operators : =
+             5. Conditional Operators
+             6. Ternary Operator ?:
+    </pre>
+    <br><hr>
+
+    <p>Q.2 What are arrow functions?</p>
+    <p>ANS</p>
+    <pre>
+       <p>Arrow function introduced in ES6 version of javascript .<br>
+          Arrow function is also called as fat arrow function.<br>
+          Arrow function stored in a variable.<br>
+          In arrow function no need of function key word.<br>
+       </p>
+
+       Ex.-
+       let X = (X,Y) => X*Y;
+    </pre>
+    <br><hr>
+
+    <p>Q.3 Difference between undefined vs not defined vs NaN</p>
+    <p>ANS</p>
+    <pre>
+        <P>Undefined
+            undefined is a global variable that JavaScript creates at run time. JavaScript assigns undefined<br>
+            to any variable that has been declared but not initialized. In other words, in a case where no<br>
+            value has been explicitly assigned to the variable, JavaScript calls it undefined.</P>
+
+        <P>null
+            It is one of JavaScript’s primitive data type and is treated as falsy for boolean operations.null is<br>
+            an empty or non-existent value and null must be assigned. We use null when we want to<br>
+            explicitly declare that a variable is empty.</P>
+
+        <P>not defined
+            A not defined is a variable that is not declared inside the code at a given point of time with<br>
+            declaration keyword like var, let, or const.</P>
+    </pre>
+    <br><hr>
+    <p>Q.4 What is callback hell</p>
+    <p>ANS</p>
+    <pre>
+         <p>Callback Hell is a pattern with multiple nested callbacks which makes code hard to read.
+         The callback hell looks like a pyramid structure.</p>
+        Ex-
+
+        setTimeout(()=>{
+            console.log("hellow1")
+            setTimeout(()=>{
+                console.log("hellow2")
+                setTimeout(()=>{
+                    console.log("hellow3")
+                    setTimeout(()=>{
+                        console.log("hellow4")
+                        setTimeout(()=>{
+                            console.log("hellow5")
+                            
+                        },1000)
+                        
+                    },1000)
+                    
+                },1000)
+                
+            },1000)
+            
+        },1000)
+        
+    </pre>
+    <br><hr>
+    <p>Q.5 Please explain Self Invoking Function and its code</p>
+    <p>ANS</p>
+    <pre>
+        <p>IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it
+            is defined and it is anonymous function.</p>
+        
+            (function ()
+                {
+                  var text = "day3;
+                  console.log(text); //IIFE
+             }
+                )();
+                console.log(text); //Error: message is not defined
+    </pre>
+    <br><hr>
+    <p>Q.6 What is the use of setTimeout</p>
+    <p>ANS</p>
+    <pre>
+       <p>The setTimeout() method calls a function after a number of milliseconds.  <br>
+        The setTimeout is executed only once.  <br>
+        We use this to delay some kind of executions.  <br>
+       </p>
+        Ex-
+
+         const printText=()=>{
+                 setTimeout(function(){
+              console.log(`welcome Yash`)
+                 },2000)
+            
+             }
+             printText()
+            
+    </pre>
+    <br><hr>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Javascriptday-1/day1.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Q.1 What is creation phase and execution phase?.</p>
+    <p>ANS</p>
+    <pre>
+       
+    </pre>
+    <br><hr>
+    <p>Q.2 What are objects in javascript? .</p>
+    <p>ANS</p>
+    <pre>
+       <p>A variable which contains multiple diffrent data types but in the form of
+        key value pair. </p>
+
+        const user={
+            name:"yash",
+            age:15,
+            sub:"maths",
+            hobbies:["cricket","reading book"]
+        }
+        
+        console.log(`The name of the student is ${user.name}.The favourite hobby is ${user.hobbies[1]} `)
+    </pre>
+    <br><hr>
+    <p>Q.3 What are function constructors?.</p>
+    <p>ANS</p>
+    <pre>
+       <p>A constructor is a special function that creates and initializes an object instance of a class. In<br>
+        JavaScript, a constructor gets called when an object is created using the new keyword. We have<br>
+        multiple constructor functions like Function constructor for functions, Object constructor<br>
+        function for objects, Array constructor function for arrays.</p>
+        Ex-
+
+         function student (Fisrt,Last,age,rollno){
+                this.FirstName = Fisrt ;
+                 this.LastName = Last;
+                 this.Age = age;
+                 this.Rollno = rollno;
+              
+              
+             }
+            
+              var student1 = new student ("yash","pawar",23,45);
+            
+              console.log(student1)
+              console.log(student1.Age)
+    </pre>
+    <br><hr>
+    <p>Q.4 What are callbacks?.</p>
+    <p>ANS</p>
+    <pre>
+       <p>A callback function is a function passed into another function as an argument. This function is<br>
+        invoked inside the outer function to complete an action.</p>
+    </pre>
+    <br><hr>
+    <p>Q.5 Explain prototypes.</p>
+    <p>ANS</p>
+    <pre>
+      
+    </pre>
+    <br><hr>
+    <p>Q.6 What is prototype chain.</p>
+    <p>ANS</p>
+    <pre>
+       
+    </pre>
+    <br><hr>
+    <p>Q.7 Give an example of inheritance using function constructor.</p>
+    <p>ANS</p>
+    <pre>
+       
+    </pre>
+    <br><hr>
+    <script src="./day2.js"></script>
+</body>
+</html>
