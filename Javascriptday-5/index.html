@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Javascriptday-1/day1.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>Q.1 What is hoisting?.</p>
+    <p>ANS</p>
+    <pre>
+       <p>Hoisting is a JavaScript mechanism where variables, function declarations and classes are moved to the top of their scope before code execution.<br>
+         Remember that JavaScript only hoists declarations, not initialisation. Let's take a simple example of variable hoisting,
+
+       </p>
+
+        Ex-
+       console.log(message);    //output : undefined
+       var message = "The variable Has been hoisted";
+    </pre>
+    <br><hr>
+
+    <p>Q.2 What is a Temporal Dead Zone?</p>
+    <p>ANS</p>
+    <pre>
+       <p>The Temporal Dead Zone is a behavior in JavaScript that occurs when declaring a variable with the let and const keywords,<br>
+        but not with var. In ECMAScript 6, accessing a let or const variable before its declaration (within its scope) causes a ReferenceError.<br>
+        The time span when that happens, between the creation of a variable’s binding and its declaration, is called the temporal dead zone.</p>
+
+        Ex-
+
+        function somemethod() {
+            console.log(counter1); // undefined
+            console.log(counter2); // ReferenceError
+            var counter1 = 1;
+            let counter2 = 2;
+          }
+    </pre>
+    <br><hr>
+
+    <p>Q.3 What is the DOM?.</p>
+    <p>ANS</p>
+    <pre>
+       <p>The Document Object Model (DOM) is the data representation of the objects that comprise the<br>
+        structure and content of a document on the web.<br>
+        The Document Object Model (DOM) is a programming interface for web documents. It<br>
+        represents the page so that programs can change the document structure, style, and content.<br>
+        The DOM represents the document as nodes and objects; that way, programming languages can<br>
+        interact with the page.<br>
+       </p>
+    </pre>
+    <br><hr>
+
+    <p>Q.4 Explain passed by value and passed by reference</p>
+    <p>ANS</p>
+    <pre>
+       <p>Both are comparator operators .thet return boolean values. <br>
+        The main diifrence is:- <br>
+        "==" is used to the compare the value only.(Loose equality) <br>
+        "===" is used to the compare the value and datatype.(strict equality) <br>
+       </p>
+    </pre>
+    <br><hr>
+
+    <p>Q.5 Write code to explain map and filter in arrays</p>
+    <p>ANS</p>
+    <pre>
+       Ex- map()
+
+                const array1 = [1, 4, 9, 16];
+
+         // pass a function to map
+         const map1 = array1.map(x => x * 2);
+
+         console.log(array1)
+         // expected output: array1[1,4,9,16]
+         console.log(map1);
+         // expected output: Array [2, 8, 18, 32]
+
+         Ex- filter()
+
+         const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+          const result = words.filter(word => word.length > 6);
+
+          console.log(result);
+          // expected output: Array ["exuberant", "destruction", "present"]
+
+
+    </pre>
+    <br><hr>
+
+    <p>Q.6 What is the purpose of async/await keywords?</p>
+    <p>ANS</p>
+    <pre>
+       <p>An async function is a function declared with the async keyword, and the await keyword is<br>
+        permitted within it. The async and await keywords enable asynchronous, promise-based<br>
+        behavior to be written in a cleaner style, avoiding the need promise chains.<br>
+       </p>
+    </pre>
+    <br><hr>
+
+    <p>Q.1 Give an example of async/await</p>
+    <p>ANS</p>
+    <pre>
+        let promise = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+            resolve('Promise resolved')}, 4000);
+            });
+            async function asyncFunc() {
+            // wait until the promise resolves
+            let result = await promise;
+            console.log(result);
+            console.log('hello');
+            }
+            // calling the async function
+            asyncFunc();
+            
+    </pre>
+    <br><hr>
+
+
+    <script src="./day5.js"></script>
+</body>
+</html>

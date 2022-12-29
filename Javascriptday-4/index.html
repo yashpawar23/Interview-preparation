@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Javascriptday-1/day1.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>Q.1 Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript.</p>
+    <p>ANS</p>
+    <pre>
+       <p>Global scope:A variable declared at the top of a program or outside of a function is considered
+        a global scope variable</p>
+
+        Ex.
+        var a=3;
+           function greet()
+           {
+           console.log(a);
+           }
+           greet()
+
+        <p>Local scope:A variable can also have a local scope, i.e it can only be accessed within a
+            function.</p>
+
+            Ex.
+            var a=4;
+              function add()
+              {
+              var q=4;
+              console.log(a+b);
+              }
+              greet()
+
+        <p>Block scope: It is related to the variables declared using let and const. Variables declared with
+            var do not have block scope.<br>
+            Block scope tells us that any variable declared inside a block { }, can be accessed only inside
+            that block and cannot be accessed outside of it.</p>
+
+        <p>scope chain: JavaScript engine also uses Scope to find variables.</p>
+
+           Ex-
+           var x=24;
+               function OuterFunction()
+               {
+               var s=224;
+               var innerfunction=function innerfunction()
+               {
+               console.log(s);
+               }
+               var innerfunction2=function innerfunction2()
+               {
+               console.log(x);
+               }
+               innerfunction();
+               innerfunction2();
+               }
+               OuterFunction()
+    </pre>
+    <br><hr>
+
+    <p>Q.2 What is difference between null and undefined ?.</p>
+    <p>ANS</p>
+    <pre>
+       <p>In JavaScript, undefined means a variable has been declared but has not yet been assigned a
+        value, such as:
+       </p>
+       Ex-
+       var testVar;
+        alert(testVar); //shows undefined
+
+        <p>null is an assignment value. It can be assigned to a variable as a representation of no value:
+        </p>
+
+        Ex-
+        var testVar = null; alert(testVar); //shows nul
+    </pre>
+    <br><hr>
+
+    <p>Q.3 What is an event loop and call stack.</p>
+    <p>ANS</p>
+    <pre>
+       <p>A call stack is a mechanism for an interpreter (like the JavaScript interpreter in a web browser) <br>
+        to keep track of its place in a script that calls multiple functions — what function is currently <br>
+        being run and what functions are called from within that function, etc. or we can say that it <br>
+        stores global execution context and function execution context.
+       </p>
+
+       <p>The event loop is a constantly running process that monitors both the callback queue and the<br>
+        call stack. All the web apis functions like setTimeout, setInterval, fetch calls etc. will not be<br>
+        directly executed inside the execution context, firstly they will be moved to callback queue and<br>
+        then the moment call stack gets empty these functions will be pushed to call stack from<br>
+        callback queue by event loop.</p>
+    </pre>
+    <br><hr>
+
+    <p>Q.4 What are promises and why do we need them?.</p>
+    <p>ANS</p>
+    <pre>
+
+        <p>Promises are used to handle asynchronous operations in JavaScript. They are easy to manage<br>
+            when dealing with multiple asynchronous operations where callbacks can create callback hell<br>
+            leading to unmanageable code.</p>
+       <p>Benefits of Promises <br>
+        1. Improves Code Readability <br>
+        2. Better handling of asynchronous operations <br>
+        3. Better flow of control definition in asynchronous logic <br>
+        4. Better Error Handling</p>
+    </pre>
+    <br><hr>
+
+    <p>Q.5 What is promise chaining.</p>
+    <p>ANS</p>
+    <pre>
+       <p>The process of executing a sequence of asynchronous tasks one after another using promises is
+        known as Promise chaining.
+       </p>
+       new Promise(function(resolve, reject) {
+        setTimeout(() => resolve(1), 1000);
+        }).then(function(result) {
+        console.log(result); // 1
+        return result * 2;
+        }).then(function(result) {
+        console.log(result); // 2
+        return result * 3;
+        }).then(function(result) {
+        console.log(result); // 6
+        return result * 4;
+        })
+    </pre>
+    <br><hr>
+
+    <p>Q.1 Difference between “ == “ and “ === “ operators.</p>
+    <p>ANS</p>
+    <pre>
+       <p>Pure Function is a function (a block of code ) that always returns the same result if the same<br>
+        arguments are passed. It does not depend on any state, or data change during a program’s<br>
+        execution rather it only depends on its input arguments.
+       </p>
+
+       function calculateGST( productPrice ) {
+        return productPrice * 0.05;
+        }
+    </pre>
+    <br><hr>
+
+    <script src="./day4.js"></script>
+</body>
+</html>

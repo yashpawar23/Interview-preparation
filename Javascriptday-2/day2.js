@@ -27,3 +27,22 @@ function callbackFunction(name) {
     callback(name);
     }
     outerFunction(callbackFunction);
+
+
+    // let arr =[11,25,6];
+    let object1 = {
+        name:"yash",
+        age : 43,
+        sub:"maths",
+        city:"mumbai",
+
+        getIntro: function(){
+            console.log(this.name + this.age)
+        }
+    }
+
+    let object2 = {
+           name:"ketan"
+    }
+    
+    object2.__proto__ =object1

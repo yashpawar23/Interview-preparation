@@ -1,0 +1,30 @@
+#heading_tag1{
+    background-color: rgb(204, 132, 132);
+    text-align: center;
+}
+
+#btn{
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.timer-bar{
+    display: flex;
+}
+
+.timer-box{
+    font-size: 50px;
+}
+
+#hellow_workld_text{
+    background-color: rgb(148, 109, 187);
+    text-align: center;
+}
+
+#heading_tag2{
+    background-color: rgb(230, 173, 67);
+    text-align: center;
+
+}

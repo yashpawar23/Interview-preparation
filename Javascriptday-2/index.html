@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,16 @@
     <link rel="stylesheet" href="../Javascriptday-1/day1.css">
     <title>Document</title>
 </head>
+
 <body>
 
     <p>Q.1 What is creation phase and execution phase?.</p>
     <p>ANS</p>
     <pre>
-       
+
     </pre>
-    <br><hr>
+    <br>
+    <hr>
     <p>Q.2 What are objects in javascript? .</p>
     <p>ANS</p>
     <pre>
@@ -30,7 +33,8 @@
         
         console.log(`The name of the student is ${user.name}.The favourite hobby is ${user.hobbies[1]} `)
     </pre>
-    <br><hr>
+    <br>
+    <hr>
     <p>Q.3 What are function constructors?.</p>
     <p>ANS</p>
     <pre>
@@ -54,32 +58,55 @@
               console.log(student1)
               console.log(student1.Age)
     </pre>
-    <br><hr>
+    <br>
+    <hr>
     <p>Q.4 What are callbacks?.</p>
     <p>ANS</p>
     <pre>
        <p>A callback function is a function passed into another function as an argument. This function is<br>
         invoked inside the outer function to complete an action.</p>
+
+        function callbackFunction(name) {
+            console.log('Hello ' + name);
+            }
+            function outerFunction(callback) {
+            callback(name);
+            }
+            outerFunction(callbackFunction);
     </pre>
-    <br><hr>
+    <br>
+    <hr>
     <p>Q.5 Explain prototypes.</p>
     <p>ANS</p>
     <pre>
-      
+      <p>Any object in JS has a private property called prototype -> All the methods / functions defined in the class(ES6) / constructor function (ES5)</p>
+
+             const str1 = new String('This is my string')
+        console.log(str1)
+        const newStr = str1.__proto__.toUpperCase() 
+        console.log(newStr)
     </pre>
-    <br><hr>
+    <br>
+    <hr>
     <p>Q.6 What is prototype chain.</p>
     <p>ANS</p>
     <pre>
-       
+        <p>Prototype chaining is used to build new types of objects based on existing ones. It is similar to   <br>
+            inheritance in a class based language.   <br>
+            The prototype on object instance is available through Object.getPrototypeOf(object) or proto   <br>
+            property whereas prototype on constructors function is available through Object.prototype.</p>
+
     </pre>
-    <br><hr>
+    <br>
+    <hr>
     <p>Q.7 Give an example of inheritance using function constructor.</p>
     <p>ANS</p>
     <pre>
-       
+
     </pre>
-    <br><hr>
+    <br>
+    <hr>
     <script src="./day2.js"></script>
 </body>
+
 </html>
